@@ -3,7 +3,7 @@ import { popularGamesURL, newGamesURL, upcomingGamesURL } from "../api";
 
 export const GameContext = createContext();
 
-export const GameProvier = ({ children }) => {
+export const GameProvider = ({ children }) => {
   const [popularGame, setPopularGame] = useState([]);
   const [newGame, setNewGame] = useState([]);
   const [upcomingGame, setupcomingGame] = useState([]);

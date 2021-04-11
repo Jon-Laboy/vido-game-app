@@ -23,7 +23,7 @@ const Home = () => {
                   key={game.id}
                   name={game.name}
                   released={game.released}
-                  id={game.id}
+                  gameid={game.id}
                   image={game.background_image}
                 />
               </Grid>
@@ -39,7 +39,7 @@ const Home = () => {
                   key={game.id}
                   name={game.name}
                   released={game.released}
-                  id={game.id}
+                  gameid={game.id}
                   image={game.background_image}
                 />
               </Grid>
@@ -55,7 +55,7 @@ const Home = () => {
                   key={game.id}
                   name={game.name}
                   released={game.released}
-                  id={game.id}
+                  gameid={game.id}
                   image={game.background_image}
                 />
               </Grid>

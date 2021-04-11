@@ -11,15 +11,18 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       justifyContent: 'center',
     },
+    
     paper: {
       backgroundColor: theme.palette.background.paper,
+      height: '700px',
+      overflow:'scroll',
       border: '2px solid #000',
       boxShadow: theme.shadows[5],
       padding: theme.spacing(2, 4, 3),
     },
   }));
 
-const GameDetailModal = ({ handleClose, open}) => {
+const DetailModal = ({ handleClose, open, name, gameDetail}) => {
     const classes = useStyles();
   
   return (
@@ -38,8 +41,12 @@ const GameDetailModal = ({ handleClose, open}) => {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="transition-modal-title">Transition modal</h2>
-            <p id="transition-modal-description">react-transition-group animates me.</p>
+            <p>background Image</p>
+            <h2 id="transition-modal-title">{name}</h2>
+            <p>ratings</p>
+            <p>platforms</p>
+            <p id="transition-modal-description">{gameDetail}</p>
+            <p>gallery</p>
           </div>
         </Fade>
       </Modal>
@@ -47,4 +54,4 @@ const GameDetailModal = ({ handleClose, open}) => {
   );
 }
 
-export default GameDetailModal
+export default DetailModal

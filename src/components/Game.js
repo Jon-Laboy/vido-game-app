@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
+import { DetailsContext } from '../context/DetailsContext'
 import DetailModal from "./DetailModal";
+import { gameDetailsURL } from '../api'
 import { makeStyles } from "@material-ui/styles";
 import {
   Grid,
@@ -23,17 +25,34 @@ const useStyles = makeStyles({
   },
 });
 
-const Game = ({ key, name, released, id, image }) => {
+const Game = ({ key, name, released, gameid, image }) => {
+
+  const [gameDetail, setGameDetail] = useContext(DetailsContext);
+
   //Modal Open/Close
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
     setOpen(true);
+    fetchDetailsURL(gameid)
   };
 
   const handleClose = () => {
     setOpen(false);
   };
+
+// Fetch details URL to get game description for modal 
+    async function fetchDetailsURL(id) {
+      try {
+        const response = await fetch(gameDetailsURL(id));
+        const data = await response.json();
+        setGameDetail(data.description_raw);
+        console.log(gameDetail)
+      } catch (err) {
+        console.log(err);
+      }
+    }
+   
 
   const classes = useStyles();
 
@@ -54,7 +73,7 @@ const Game = ({ key, name, released, id, image }) => {
             <Typography variant="body2" color="textSecondary" component="p">
               {released}
             </Typography>
-            <DetailModal handleClose={handleClose} open={open} />
+            <DetailModal handleClose={handleClose} open={open} name={name} gameDetail={gameDetail} />
           </CardContent>
         </CardActionArea>
       </Card>
