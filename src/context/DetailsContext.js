@@ -3,7 +3,7 @@ import { gameDetailsURL } from "../api";
 
 export const DetailsContext = createContext();
 
-export const DetailsProvier = ({ children }) => {
+export const DetailsProvider = ({ children }) => {
   const [gameDetail, setGameDetail] = useState([]);
  
 

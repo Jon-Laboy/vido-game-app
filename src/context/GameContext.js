@@ -14,6 +14,7 @@ export const GameProvier = ({ children }) => {
         const response = await fetch(popularGamesURL());
         const data = await response.json();
         setPopularGame(data.results);
+        console.log(popularGame)
       } catch (err) {
         console.log(err);
       }
