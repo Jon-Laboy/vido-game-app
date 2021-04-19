@@ -1,5 +1,5 @@
-import React from 'react'
-import { DetailsContext } from '../context/DetailsContext'
+import React, {useContext} from 'react'
+import { GameContext } from '../context/GameContext'
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
     
     paper: {
       backgroundColor: theme.palette.background.paper,
-      height: '700px',
+      height: '75vh',
+      width: '88vw',
       overflow:'scroll',
       border: '2px solid #000',
       boxShadow: theme.shadows[5],
@@ -22,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-const DetailModal = ({ handleClose, open, name, gameDetail}) => {
+const DetailModal = ({ handleClose, open, name, gameDetail, rating, gallery}) => {
+  
     const classes = useStyles();
   
   return (
@@ -41,12 +43,19 @@ const DetailModal = ({ handleClose, open, name, gameDetail}) => {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <p>background Image</p>
             <h2 id="transition-modal-title">{name}</h2>
-            <p>ratings</p>
-            <p>platforms</p>
-            <p id="transition-modal-description">{gameDetail}</p>
-            <p>gallery</p>
+            <p>{rating}</p>
+            {gameDetail.platforms && gameDetail.platforms.map(platform => (
+             <h6>{platform.platform.name}</h6>
+           ))}
+            <p id="transition-modal-description">{gameDetail.description_raw}</p>
+          {console.log(gameDetail.platforms)}
+
+            {gallery && gallery.map(image => (
+              <img style={{height: '100px', width:'200px'}} key = {image.id} src={image.image}/>
+            ))}
+             
+           
           </div>
         </Fade>
       </Modal>

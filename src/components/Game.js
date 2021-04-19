@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { DetailsContext } from '../context/DetailsContext'
 import DetailModal from "./DetailModal";
 import { gameDetailsURL } from '../api'
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Game = ({ key, name, released, gameid, image }) => {
+const Game = ({ key, name, released, gameid, image, rating, gallery }) => {
 
   const [gameDetail, setGameDetail] = useContext(DetailsContext);
 
@@ -35,6 +35,7 @@ const Game = ({ key, name, released, gameid, image }) => {
   const handleOpen = () => {
     setOpen(true);
     fetchDetailsURL(gameid)
+    console.log(gameid)
   };
 
   const handleClose = () => {
@@ -46,10 +47,10 @@ const Game = ({ key, name, released, gameid, image }) => {
       try {
         const response = await fetch(gameDetailsURL(id));
         const data = await response.json();
-        setGameDetail(data.description_raw);
+        setGameDetail(data);
         console.log(gameDetail)
       } catch (err) {
-        console.log(err);
+        console.log(`didn't work ${err}`);
       }
     }
    
@@ -73,7 +74,7 @@ const Game = ({ key, name, released, gameid, image }) => {
             <Typography variant="body2" color="textSecondary" component="p">
               {released}
             </Typography>
-            <DetailModal handleClose={handleClose} open={open} name={name} gameDetail={gameDetail} />
+            <DetailModal handleClose={handleClose} open={open} name={name} gameDetail={gameDetail} rating={rating} gallery={gallery}  />
           </CardContent>
         </CardActionArea>
       </Card>

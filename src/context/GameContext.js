@@ -13,8 +13,8 @@ export const GameProvider = ({ children }) => {
       try {
         const response = await fetch(popularGamesURL());
         const data = await response.json();
+        console.log(data)
         setPopularGame(data.results);
-        console.log(popularGame)
       } catch (err) {
         console.log(err);
       }

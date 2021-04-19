@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Game from "../components/Game";
 import { GameContext } from "../context/GameContext";
 import { Container, Grid } from "@material-ui/core";
+import SearchbBar from '../components/SearchBar'
 
 const Home = () => {
   const { popularGames, newGames, upcomingGames } = useContext(GameContext);
@@ -10,14 +11,16 @@ const Home = () => {
   const [upcomingGame, setUpcomingGame] = upcomingGames;
   return (
     <div className="game-list">
+   
       <Container
         maxWidth="xl"
         style={{ textAlign: "center" }}
       >
+      <SearchbBar />
         <h2>Ucoming Games</h2>
         <div className="games">
           <Grid container spacing={2} justify="center">
-            {upcomingGame.map((game) => (
+            {upcomingGame && upcomingGame.map((game) => (
               <Grid item xs={12} md={6} lg={4}>
                 <Game
                   key={game.id}
@@ -25,6 +28,9 @@ const Home = () => {
                   released={game.released}
                   gameid={game.id}
                   image={game.background_image}
+                  platforms = {game.platforms}
+                  rating = {game.rating}
+                  gallery = {game.short_screenshots}
                 />
               </Grid>
             ))}
@@ -33,14 +39,17 @@ const Home = () => {
         <h2>New Games</h2>
         <div className="games">
           <Grid container spacing={2} justify="center">
-            {newGame.map((game) => (
+            {newGame && newGame.map((game) => (
               <Grid item xs={12} md={6} lg={4}>
                 <Game
-                  key={game.id}
-                  name={game.name}
-                  released={game.released}
-                  gameid={game.id}
-                  image={game.background_image}
+                   key={game.id}
+                   name={game.name}
+                   released={game.released}
+                   gameid={game.id}
+                   image={game.background_image}
+                   platforms = {game.platforms}
+                   rating = {game.rating}
+                   gallery = {game.short_screenshots}                
                 />
               </Grid>
             ))}
@@ -49,14 +58,16 @@ const Home = () => {
         <h2>Popular Games</h2>
         <div className="games">
           <Grid container spacing={2} justify="center">
-            {popularGame.map((game) => (
+            {popularGame && popularGame.map((game) => (
               <Grid item xs={12} md={6} lg={4}>
                 <Game
-                  key={game.id}
-                  name={game.name}
-                  released={game.released}
-                  gameid={game.id}
-                  image={game.background_image}
+                 key={game.id}
+                 name={game.name}
+                 released={game.released}
+                 gameid={game.id}
+                 image={game.background_image}
+                 rating = {game.rating}
+                 gallery = {game.short_screenshots}
                 />
               </Grid>
             ))}
