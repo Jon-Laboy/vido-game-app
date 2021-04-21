@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { TextField, InputAdornment, Button } from "@material-ui/core";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import { deepOrange, blue, orange } from "@material-ui/core/colors";
+import { deepOrange, blue, orange, red } from "@material-ui/core/colors";
 
 import { SearchIcon } from "@material-ui/icons";
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: deepOrange[500],
+      main: red[500],
     },
     secondary: {
       main: blue[500],
@@ -43,7 +43,7 @@ const SearchbBar = () => {
         />
        
       </form>
-      <Button onClick = {handleSubmit} variant="contained" color="primary">search</Button>
+      {/* <Button onClick = {handleSubmit} variant="contained" color="primary">search</Button> */}
     </ThemeProvider>
   );
 };

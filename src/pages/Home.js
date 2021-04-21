@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import Game from "../components/Game";
 import { GameContext } from "../context/GameContext";
 import { Container, Grid } from "@material-ui/core";
-import SearchbBar from '../components/SearchBar'
+import SearchbBar from '../components/SearchBar';
+import '../App.css'
 
 const Home = () => {
   const { popularGames, newGames, upcomingGames } = useContext(GameContext);
@@ -17,7 +18,7 @@ const Home = () => {
         style={{ textAlign: "center" }}
       >
       <SearchbBar />
-        <h2>Ucoming Games</h2>
+        <h2 classname= "home-page-titles">Upcoming Games</h2>
         <div className="games">
           <Grid container spacing={2} justify="center">
             {upcomingGame && upcomingGame.map((game) => (
@@ -36,7 +37,7 @@ const Home = () => {
             ))}
           </Grid>
         </div>
-        <h2>New Games</h2>
+        <h2 classname= "home-page-titles">New Games</h2>
         <div className="games">
           <Grid container spacing={2} justify="center">
             {newGame && newGame.map((game) => (
@@ -55,7 +56,7 @@ const Home = () => {
             ))}
           </Grid>
         </div>
-        <h2>Popular Games</h2>
+        <h2 classname= "home-page-titles">Popular Games</h2>
         <div className="games">
           <Grid container spacing={2} justify="center">
             {popularGame && popularGame.map((game) => (
