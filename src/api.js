@@ -42,3 +42,4 @@ export const popularGamesURL = () => `${base_url}${popular_games}`;
 export const upcomingGamesURL = () => `${base_url}${upcoming_games}`;
 export const newGamesURL = () => `${base_url}${new_games}`;
 
+// https://api.rawg.io/api/search=sonic?key=a331fe3877da4b238c9b16cdc4f27222

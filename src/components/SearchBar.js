@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TextField, InputAdornment, Button } from "@material-ui/core";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import { deepOrange, blue } from "@material-ui/core/colors";
+import { deepOrange, blue, orange } from "@material-ui/core/colors";
 
 import { SearchIcon } from "@material-ui/icons";
 
@@ -32,7 +32,7 @@ const SearchbBar = () => {
   return (
     <ThemeProvider theme={theme}>
       <form onSubmit={handleSubmit}>
-      <span><TextField
+      <TextField
           id="search-bar"
           placeholder="search games"
           size="large"
@@ -41,8 +41,9 @@ const SearchbBar = () => {
           onChange={updateInput}
           color="primary"
         />
-        <Button id="search-button" variant="contained" color="primary">search</Button></span>
+       
       </form>
+      <Button onClick = {handleSubmit} variant="contained" color="primary">search</Button>
     </ThemeProvider>
   );
 };

@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+   
 }
 
 body{
@@ -51,6 +52,19 @@ img{
 button {
   position: relative; 
   height: 3rem;
-  margin-top: 33rem;
+  margin-top: 3rem;
 }
 
+.description-gallery {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  flex-wrap: wrap; 
+}
+
+.description-gallery-images { 
+  height: 50%;
+  width:40%;
+  margin:1rem;
+  border-radius: 3px;
+}
