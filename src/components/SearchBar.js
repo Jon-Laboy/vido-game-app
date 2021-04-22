@@ -35,15 +35,12 @@ const SearchbBar = () => {
       <TextField
           id="search-bar"
           placeholder="search games"
-          size="large"
           margin="normal"
           value={input}
           onChange={updateInput}
-          color="primary"
-        />
-       
+        />  
       </form>
-      {/* <Button onClick = {handleSubmit} variant="contained" color="primary">search</Button> */}
+      <Button onClick = {handleSubmit} variant="contained" color="primary">search</Button>
     </ThemeProvider>
   );
 };

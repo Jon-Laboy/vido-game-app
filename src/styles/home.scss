@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Black+Ops+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Audiowide', cursive;
+    width: 100%; 
+    background: #252425; 
+  }
+
+ img {
+     display: block;
+ }
+
+  #home-page-titles {
+        font-size: 4rem;
+        font-family: 'Audiowide', cursive;
+        font-weight: lighter;
+        color:  rgb(219, 5, 5);
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        letter-spacing: 2px;    
+  }
+
+  #card-title{
+    color: rgb(187, 2, 2);
+    font-family: 'Audiowide', cursive;
+    letter-spacing: 1.5px;
+  }
+  #card-release-date { 
+    color: #333;
+    font-size: 1.2rem; 
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 5px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(245, 20, 20);
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(241, 85, 85);
+    border-radius: 5px;
+  }
+
+
+  @import "./search-bar";
+  @import "./detail-modal";

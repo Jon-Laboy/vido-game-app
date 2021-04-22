@@ -49,9 +49,9 @@ const DetailModal = ({
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper} style={{ height: "100vh" }}>
+          <div className={classes.paper} style={{ height: "100vh" }} id="detail-modal">
             <h2>{name}</h2>
-            <Rating name="read-only" value={rating} readOnly />
+            <Rating className = "star-rating"name="read-only" value={rating} readOnly />
             <h3 style={{textDecoration:"underline"}}>Platforms</h3>
             {gameDetail.platforms &&
               gameDetail.platforms.map((platform) => (

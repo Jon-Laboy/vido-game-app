@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import './App.css';
+import './styles/home.scss'
 import Home from './pages/Home'
 import  { GameProvider } from './context/GameContext'
 import { DetailsProvider } from './context/DetailsContext'

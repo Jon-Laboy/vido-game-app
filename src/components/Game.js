@@ -68,10 +68,10 @@ const Game = ({ key, name, released, gameid, image, rating, gallery }) => {
             onClick={handleOpen}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h5" component="h2" id="card-title">
               {name}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body1" color="textSecondary" component="p" id="card-release-date">
               {released}
             </Typography>
             <DetailModal handleClose={handleClose} open={open} name={name} gameDetail={gameDetail} rating={rating} gallery={gallery}  />
