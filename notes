@@ -1,6 +1,14 @@
 
 // make button to submit too 
 
-//style up boo boo 
+//style up boo boo  
+    -- make card with release dates same height and visible..
+    -- make fully responsive 
+        -when screen smaller search bar wider
+        -everything else too lol 
+
+    --transfer inline style of search buttons and stuff over to sass 
 
 //MAYBE redo context state to better fit 
+
+// set loading screen

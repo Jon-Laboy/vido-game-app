@@ -49,10 +49,19 @@ const DetailModal = ({
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper} style={{ height: "100vh" }} id="detail-modal">
+          <div
+            className={classes.paper}
+            style={{ height: "100vh" }}
+            id="detail-modal"
+          >
             <h2>{name}</h2>
-            <Rating className = "star-rating"name="read-only" value={rating} readOnly />
-            <h3 style={{textDecoration:"underline"}}>Platforms</h3>
+            <Rating
+              className="star-rating"
+              name="read-only"
+              value={rating}
+              readOnly
+            />
+            <h3 style={{ textDecoration: "underline" }}>Platforms</h3>
             {gameDetail.platforms &&
               gameDetail.platforms.map((platform) => (
                 <h4 className="platforms">{platform.platform.name}</h4>
@@ -60,7 +69,6 @@ const DetailModal = ({
             <p id="transition-modal-description">
               {gameDetail.description_raw}
             </p>
-            {console.log(gameDetail.platforms)}
 
             <div className="description-gallery">
               {gallery &&

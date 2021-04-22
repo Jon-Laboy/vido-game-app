@@ -1,13 +1,59 @@
+.game-logo { 
+  color: red;
+  margin: 1.5rem;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  span {
+    font-size: 4rem;
+    padding: 1.5rem; 
+  } 
+}
+
 #search-bar {
-    /* background-color: #ffadad;
-    color: #333; */
-    background-color:#000;
-    color: white;
-    text-align: center;
-    letter-spacing: 2px;
-    font-size: 1.3rem;
-    width: 50vw;
-    margin-top: 3rem;
-    height: 2.5rem; 
-    border-radius: 8px;
-  }
+  background: #000; 
+  color: white;
+  font-weight: bold;
+  font-size: 1.67rem;
+  letter-spacing: 2.5px;
+  padding: 0.7rem;
+  box-shadow: 0px 0px 30px rgba(255, 0, 0, 0.247);
+  width:30vw;
+  border-radius: 8px;
+}
+
+// .search-section {
+//   #search-bar {
+//     background-color:#000;
+//     color: white;
+//     text-align: center;
+//     letter-spacing: 2.7px;
+//     font-size: 1.67rem;
+//     padding: 0.5rem; 
+//     font-weight: bold;
+//     width: 30vw;
+//     height: 2.5rem; 
+//     border-radius: 8px;
+//     box-shadow: 0px 0px 30px rgba(255, 0, 0, 0.247);
+//   }
+//   button {
+//     height: 4rem;
+//     margin: 1rem; 
+
+//   }
+
+
+// }
+
+  
+  //   button {
+  //     align-self: center; 
+  //     height: 3rem;
+  //     width: 3rem;
+  //     bottom: 0;
+  //     width: 6rem;
+  //     cursor: pointer;
+  //     box-shadow: 0px 0px 30px rgba(153, 0, 0, 0.445);
+  //     padding: 1rem;
+  //   }
+  // }

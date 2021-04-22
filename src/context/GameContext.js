@@ -7,13 +7,13 @@ export const GameProvider = ({ children }) => {
   const [popularGame, setPopularGame] = useState([]);
   const [newGame, setNewGame] = useState([]);
   const [upcomingGame, setupcomingGame] = useState([]);
+  const [searchGame, setSearchGame] = useState([]);
 
   useEffect(() => {
     async function fetchPopularURL() {
       try {
         const response = await fetch(popularGamesURL());
         const data = await response.json();
-        console.log(data)
         setPopularGame(data.results);
       } catch (err) {
         console.log(err);
@@ -48,6 +48,7 @@ export const GameProvider = ({ children }) => {
         popularGames: [popularGame, setPopularGame],
         newGames: [newGame, setNewGame],
         upcomingGames: [upcomingGame, setupcomingGame],
+        searchedGames: [searchGame, setSearchGame]
       }}
     >
       {children}

@@ -5,10 +5,12 @@ import { Container, Grid } from "@material-ui/core";
 import SearchbBar from '../components/SearchBar';
 
 const Home = () => {
-  const { popularGames, newGames, upcomingGames } = useContext(GameContext);
+  const { popularGames, newGames, upcomingGames, searchedGames } = useContext(GameContext);
   const [popularGame, setPopularGame] = popularGames;
   const [newGame, setNewGame] = newGames;
   const [upcomingGame, setUpcomingGame] = upcomingGames;
+  const [searchGame, setSearchGame] = searchedGames; 
+  
   return (
     <div className="game-list">
    
@@ -17,6 +19,27 @@ const Home = () => {
         style={{ textAlign: "center" }}
       >
       <SearchbBar />
+      {searchGame.length ? (
+      <h2 id= "home-page-titles">Searched Games</h2>) : ''}
+        <div className="games">
+          <Grid container spacing={2} justify="center">
+            {searchGame && searchGame.map((game) => (
+              <Grid item xs={12} md={6} lg={4}>
+                <Game
+                  key={game.id}
+                  name={game.name}
+                  released={game.released}
+                  gameid={game.id}
+                  image={game.background_image}
+                  platforms = {game.platforms}
+                  rating = {game.rating}
+                  gallery = {game.short_screenshots}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </div>
+        
         <h2 id= "home-page-titles">Upcoming Games</h2>
         <div className="games">
           <Grid container spacing={2} justify="center">
