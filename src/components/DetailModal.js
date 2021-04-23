@@ -32,16 +32,12 @@ const DetailModal = ({
   gameDetail,
   rating,
   gallery,
-  loadingDetail
+  loadingDetail,
 }) => {
   const classes = useStyles();
 
   return (
     <div>
-      {loadingDetail ? (<div >
-          <PacmanLoader size={70} color={"#D0021B"} loading={loadingDetail} />
-        </div>
-      ) : (
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -60,36 +56,47 @@ const DetailModal = ({
             style={{ height: "100vh" }}
             id="detail-modal"
           >
-            <h2>{name}</h2>
-            <Rating
-              className="star-rating"
-              name="read-only"
-              value={rating}
-              readOnly
-            />
-            {/* <h3 style={{ textDecoration: "underline" }}>Platforms</h3> */}
-            {gameDetail.platforms &&
-              gameDetail.platforms.map((platform) => (
-                <h4 className="platforms">{platform.platform.name}</h4>
-              ))}
-            <p id="transition-modal-description">
-              {gameDetail.description_raw}
-            </p>
+            {loadingDetail ? (
+              <div className="pacman-loader">
+                <PacmanLoader
+                  size={70}
+                  color={"#D0021B"}
+                  loading={loadingDetail}
+                />
+              </div>
+            ) : (
+              <div>
+                <h2>{name}</h2>
+                <Rating
+                  className="star-rating"
+                  name="read-only"
+                  value={rating}
+                  readOnly
+                />
+                {/* <h3 style={{ textDecoration: "underline" }}>Platforms</h3> */}
+                {gameDetail.platforms &&
+                  gameDetail.platforms.map((platform) => (
+                    <h4 className="platforms">{platform.platform.name}</h4>
+                  ))}
+                <p id="transition-modal-description">
+                  {gameDetail.description_raw}
+                </p>
 
-            <div className="description-gallery">
-              {gallery &&
-                gallery.map((image) => (
-                  <img
-                    className="description-gallery-images"
-                    key={image.id}
-                    src={image.image}
-                  />
-                ))}
-            </div>
+                <div className="description-gallery">
+                  {gallery &&
+                    gallery.map((image) => (
+                      <img
+                        className="description-gallery-images"
+                        key={image.id}
+                        src={image.image}
+                      />
+                    ))}
+                </div>
+              </div>
+            )}
           </div>
         </Fade>
       </Modal>
-      )}
     </div>
   );
 };
