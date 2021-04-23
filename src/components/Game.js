@@ -27,15 +27,17 @@ const useStyles = makeStyles({
 
 const Game = ({ key, name, released, gameid, image, rating, gallery }) => {
 
-  const [gameDetail, setGameDetail] = useContext(DetailsContext);
-
+  const { gamedetails, loadingDetails } = useContext(DetailsContext);
+  const [gameDetail, setGameDetail]= gamedetails;
+  const [loadingDetail, setLoadingDetail] = loadingDetails;
+  
   //Modal Open/Close
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
     setOpen(true);
-    fetchDetailsURL(gameid)
-    console.log(gameid)
+    fetchDetailsURL(gameid);
+    console.log(gameid);
   };
 
   const handleClose = () => {
@@ -44,11 +46,13 @@ const Game = ({ key, name, released, gameid, image, rating, gallery }) => {
 
 // Fetch details URL to get game description for modal 
     async function fetchDetailsURL(id) {
+      setLoadingDetail(true)
       try {
         const response = await fetch(gameDetailsURL(id));
         const data = await response.json();
         setGameDetail(data);
-        console.log(gameDetail)
+        setLoadingDetail(false);
+        console.log(gameDetail);
       } catch (err) {
         console.log(`didn't work ${err}`);
       }
@@ -74,7 +78,7 @@ const Game = ({ key, name, released, gameid, image, rating, gallery }) => {
             <Typography variant="body1" color="textSecondary" component="p" id="card-release-date">
               {released}
             </Typography>
-            <DetailModal handleClose={handleClose} open={open} name={name} gameDetail={gameDetail} rating={rating} gallery={gallery}  />
+            <DetailModal handleClose={handleClose} open={open} name={name} gameDetail={gameDetail} rating={rating} gallery={gallery} loadingDetail={loadingDetail}  />
           </CardContent>
         </CardActionArea>
       </Card>

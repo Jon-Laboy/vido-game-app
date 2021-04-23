@@ -1,63 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Black+Ops+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Black+Ops+One&display=swap");
 
 * {
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Audiowide', cursive;
-    width: 100%; 
-    background: #252425; 
-  }
+  font-family: "Audiowide", cursive;
+  width: 100%;
+  background: #252425;
+}
 
- img {
-     display: block;
- }
+.pacman-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
 
-  #home-page-titles {
-        font-size: 4rem;
-        font-family: 'Audiowide', cursive;
-        font-weight: lighter;
-        color:  rgb(219, 5, 5);
-        margin-top: 3rem;
-        margin-bottom: 2rem;
-        letter-spacing: 2px;    
-  }
+img {
+  display: block;
+  object-fit: cover;
+}
 
-  #card-title{
-    color: rgb(187, 2, 2);
-    font-family: 'Audiowide', cursive;
-    letter-spacing: 1.5px;
-  }
-  #card-release-date { 
-    color: #333;
-    font-size: 1.2rem; 
-  }
+#home-page-titles {
+  font-size: 4rem;
+  font-family: "Audiowide", cursive;
+  font-weight: lighter;
+  color: rgb(244, 67, 54);
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
 
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #000000;
-    border-radius: 5px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(245, 20, 20);
-    border-radius: 5px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(241, 85, 85);
-    border-radius: 5px;
-  }
+#card-title {
+  color: rgb(187, 2, 2);
+  font-family: "Audiowide", cursive;
+  letter-spacing: 1.5px;
+}
 
+#card-release-date {
+  color: #333;
+  font-size: 1.2rem;
+}
 
-  @import "./search-bar";
-  @import "./detail-modal";
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(244, 67, 54);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(238, 94, 94);
+  border-radius: 5px;
+}
+
+@import "./search-bar";
+@import "./detail-modal";

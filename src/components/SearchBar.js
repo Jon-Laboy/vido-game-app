@@ -56,22 +56,6 @@ const SearchbBar = () => {
         <GamepadIcon style={{ fontSize: "5rem" }} />
         <span>Game Pad</span>
       </div>
-      
-      {/* <div className="search-section">
-        <form onSubmit={handleSubmit}>
-          <TextField
-            id="search-bar"
-            placeholder="search games..."
-            margin="normal"
-            value={input}
-            onChange={updateInput}
-          />
-        </form>
-        <Button onClick={handleSubmit} variant="contained" color="primary">
-          {<SearchIcon />}
-        </Button>
-      </div> */}
-
 
     <div className = "search-section">
       <Grid container style={{display:"flex", justifyContent:"center", alignItems:"center" }}>
@@ -88,7 +72,7 @@ const SearchbBar = () => {
         </Grid>
 
         <Grid item alignItems="stretch" style={{ display: "flex" }}>
-          <Button onClick = {handleSubmit} color="primary" variant="contained" style={{height: "2.88rem", borderRadius:"8px", marginLeft:".3rem", padding: "1.4rem"}}>
+          <Button onClick = {handleSubmit} color="primary" variant="contained" style={{height: "2.88rem", borderRadius:"8px", marginLeft:".4rem", padding: "1.4rem", boxShadow:"0px 0px 3px rgb(244,67,54)"}}>
             <SearchIcon  />
           </Button>
         </Grid>

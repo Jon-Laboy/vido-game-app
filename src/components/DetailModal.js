@@ -5,6 +5,7 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import { Rating } from "@material-ui/lab/";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -31,11 +32,16 @@ const DetailModal = ({
   gameDetail,
   rating,
   gallery,
+  loadingDetail
 }) => {
   const classes = useStyles();
 
   return (
     <div>
+      {loadingDetail ? (<div >
+          <PacmanLoader size={70} color={"#D0021B"} loading={loadingDetail} />
+        </div>
+      ) : (
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -61,7 +67,7 @@ const DetailModal = ({
               value={rating}
               readOnly
             />
-            <h3 style={{ textDecoration: "underline" }}>Platforms</h3>
+            {/* <h3 style={{ textDecoration: "underline" }}>Platforms</h3> */}
             {gameDetail.platforms &&
               gameDetail.platforms.map((platform) => (
                 <h4 className="platforms">{platform.platform.name}</h4>
@@ -83,6 +89,7 @@ const DetailModal = ({
           </div>
         </Fade>
       </Modal>
+      )}
     </div>
   );
 };
