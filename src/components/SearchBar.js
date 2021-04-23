@@ -51,32 +51,45 @@ const SearchbBar = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      
       <div className="game-logo" onClick={clearSearch}>
-        <GamepadIcon style={{ fontSize: "5rem" }} />
+        <GamepadIcon style={{ fontSize: "5rem" }} id="gamepad-logo" />
         <span>Game Pad</span>
       </div>
 
-    <div className = "search-section">
-      <Grid container style={{display:"flex", justifyContent:"center", alignItems:"center" }}>
-        <Grid item>
-          <form onSubmit= {handleSubmit} >
-          <TextField 
-            id="search-bar"
-            placeholder="search games..."
-            margin="normal"
-            value={input}
-            onChange={updateInput}
-          />
-          </form>
-        </Grid>
+      <div className="search-section">
+        <Grid
+          container
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Grid item>
+            <form onSubmit={handleSubmit}>
+              <TextField
+                id="search-bar"
+                placeholder="search games..."
+                margin="normal"
+                value={input}
+                onChange={updateInput}
+              />
+            </form>
+          </Grid>
 
-        <Grid item alignItems="stretch" style={{ display: "flex" }}>
-          <Button onClick = {handleSubmit} color="primary" variant="contained" style={{height: "2.88rem", borderRadius:"8px", marginLeft:".4rem", padding: "1.4rem", boxShadow:"0px 0px 3px rgb(244,67,54)"}}>
-            <SearchIcon  />
-          </Button>
+          <Grid item alignItems="stretch" style={{ display: "flex" }}>
+            <div>
+            <Button
+              id="search-btn"
+              onClick={handleSubmit}
+              color="primary"
+              variant="contained"
+            >
+              <SearchIcon />
+            </Button>
+            </div>
+          </Grid>
         </Grid>
-      </Grid>
       </div>
     </ThemeProvider>
   );

@@ -2,16 +2,16 @@
 
 //style up boo boo  
     -- make card with release dates same height and visible.........
-    -- make fully responsive 
+    -- make fully responsive ..............
         -when screen smaller search bar wider
         -everything else too lol 
 
-    --transfer inline style of search buttons and stuff over to sass 
+    
+    --add framer motion a bit MAYBE 
 
-    --style detail modal more move platforms to right side 
+    --"check for other inline styles to transfer to sass" MAYBE
 
-    --add framer motion a bit 
+    -- style detail modal more move platforms to right side MAYBE 
 
-//MAYBE redo context state to better fit 
+//MAYBE redo context state to better fit  MAYBE
 
-// set loading screen
