@@ -20,10 +20,6 @@ body {
   height: 100vh;
 }
 
-img {
-  display: block;
-  object-fit: cover;
-}
 .game-logo {
   color: rgb(244, 67, 54);
   margin: 1.5rem;
@@ -79,12 +75,12 @@ img {
   background: rgb(238, 94, 94);
   border-radius: 5px;
 }
-@media screen and (max-width: 669px) {
+@media (max-width: 669px) {
   #home-page-titles { 
     font-size: 3.5rem; 
   }
 }
-@media screen and (max-width: 579px) {
+@media (max-width: 579px) {
   .game-logo {
     span { 
       font-size: 3.14rem;
@@ -94,7 +90,7 @@ img {
     font-size: 3rem; 
   }
 }
-@media screen and (max-width: 505px) {
+@media (max-width: 505px) {
   .game-logo {
     span { 
       font-size: 3rem;
@@ -103,8 +99,11 @@ img {
   #home-page-titles { 
     font-size: 2.8rem; 
   }
+  #card {
+    width:90vw;
+  }
 }
-@media screen and (max-width: 477px) {
+@media (max-width: 477px) {
   .game-logo {
     span { 
       font-size: 2.5rem;
@@ -113,8 +112,11 @@ img {
   #home-page-titles { 
     font-size: 2.2rem; 
   }
+  #card-media {
+    width: 100%;
+  }
 }
-@media screen and (max-width: 427px) {
+@media (max-width: 427px) {
   .game-logo {
     span { 
       font-size: 2.02rem;
@@ -124,20 +126,20 @@ img {
     font-size: 2.03rem; 
   }
 }
-@media screen and (max-width: 385px) {
+@media (max-width: 385px) {
   .game-logo {
     #gamepad-logo {
       font: 10rem;
     }
     span { 
-      font-size: 1.83rem;
-    } 
+      font-size: 1.9rem;
+    }
   }
   #home-page-titles { 
     font-size: 1.8rem; 
   }
 }
-@media screen and (max-width: 367px) {
+@media (max-width: 367px) {
   .game-logo {
     span { 
       font-size: 1.47rem;

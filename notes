@@ -1,12 +1,12 @@
 
 
 //style up boo boo  
-    -- make card with release dates same height and visible.........
+    -- make card with release dates same height and visible/////////////////
     -- make fully responsive ..............
         -when screen smaller search bar wider
         -everything else too lol 
-
-    
+    -- add pacman loading for searched section .........
+    -- add exit button to details modal
     --add framer motion a bit MAYBE 
 
     --"check for other inline styles to transfer to sass" MAYBE

@@ -6,7 +6,7 @@ import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import { Rating } from "@material-ui/lab/";
 import PacmanLoader from "react-spinners/PacmanLoader";
-
+import {CgCloseR} from "react-icons/cg"
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: "flex",
@@ -66,6 +66,9 @@ const DetailModal = ({
               </div>
             ) : (
               <div>
+                <div className= "close-modal">
+                <CgCloseR id= "close-icon" onClick={handleClose} />
+                </div>
                 <h2>{name}</h2>
                 <Rating
                   className="star-rating"

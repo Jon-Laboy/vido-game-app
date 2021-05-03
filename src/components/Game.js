@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     maxWidth: 475,
     marginTop: "5rem",
     marginBottom: "3rem",
-    height: 380,
+    height: 415,
   },
   media: {
     width: 475,
@@ -63,9 +63,10 @@ const Game = ({ key, name, released, gameid, image, rating, gallery }) => {
 
   return (
     <Grid container spacing={4} justify="center">
-      <Card className={classes.root}>
+      <Card className={classes.root} id="card">
         <CardActionArea>
           <CardMedia
+            id = "card-media"
             className={classes.media}
             image={image}
             title={name}

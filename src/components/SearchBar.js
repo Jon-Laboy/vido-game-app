@@ -78,7 +78,7 @@ const SearchbBar = () => {
           </Grid>
 
           <Grid item alignItems="stretch" style={{ display: "flex" }}>
-            <div>
+            <div className="btn-div">
             <Button
               id="search-btn"
               onClick={handleSubmit}
