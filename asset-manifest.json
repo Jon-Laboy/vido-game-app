@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/vido-game-app/static/css/main.964e9d37.chunk.css",
+    "main.js": "/vido-game-app/static/js/main.472990b1.chunk.js",
+    "main.js.map": "/vido-game-app/static/js/main.472990b1.chunk.js.map",
+    "runtime-main.js": "/vido-game-app/static/js/runtime-main.ad292e3e.js",
+    "runtime-main.js.map": "/vido-game-app/static/js/runtime-main.ad292e3e.js.map",
+    "static/js/2.e4630c32.chunk.js": "/vido-game-app/static/js/2.e4630c32.chunk.js",
+    "static/js/2.e4630c32.chunk.js.map": "/vido-game-app/static/js/2.e4630c32.chunk.js.map",
+    "index.html": "/vido-game-app/index.html",
+    "static/css/main.964e9d37.chunk.css.map": "/vido-game-app/static/css/main.964e9d37.chunk.css.map",
+    "static/js/2.e4630c32.chunk.js.LICENSE.txt": "/vido-game-app/static/js/2.e4630c32.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ad292e3e.js",
+    "static/js/2.e4630c32.chunk.js",
+    "static/css/main.964e9d37.chunk.css",
+    "static/js/main.472990b1.chunk.js"
+  ]
+}
