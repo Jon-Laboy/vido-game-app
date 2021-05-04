@@ -9,10 +9,15 @@
         color: red;
         height: 2.5rem;
         width:2.5rem;
-        margin:1rem;
+        margin:.08rem;
+        &:hover {
+            background:red;
+            color: white;
+            border-radius: 13px;
+        }
     } 
     h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-family: 'Audiowide', cursive;
         font-weight: lighter;
         color:  rgb(219, 5, 5);
@@ -42,11 +47,17 @@
         margin-top: 1rem;
         flex-wrap: wrap;
             img { 
-                height: 50%;
-                width:40%;
+                height: 70%;
+                width:70%;
                 margin:1rem;
                 border-radius: 3px;
-            } 
+            }
+            
+            @media (max-width: 816px) {
+                img{
+                    height:100%;
+                    width: 100%;
+                }
+            }
     }
 }
-

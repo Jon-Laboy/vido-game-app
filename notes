@@ -6,7 +6,9 @@
         -when screen smaller search bar wider
         -everything else too lol 
     -- add pacman loading for searched section .........
-    -- add exit button to details modal
+    -- add exit button to details modal /////////////////
+    -- make detail modal title fit on smaller resolution and images larger...........
+    -- make images cover wholecard 
     --add framer motion a bit MAYBE 
 
     --"check for other inline styles to transfer to sass" MAYBE

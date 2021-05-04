@@ -76,7 +76,6 @@ const DetailModal = ({
                   value={rating}
                   readOnly
                 />
-                {/* <h3 style={{ textDecoration: "underline" }}>Platforms</h3> */}
                 {gameDetail.platforms &&
                   gameDetail.platforms.map((platform) => (
                     <h4 className="platforms">{platform.platform.name}</h4>

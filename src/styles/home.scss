@@ -53,6 +53,15 @@ body {
   color: #333;
   font-size: 1.2rem;
 }
+#card {
+  transition: transform 0.5s;
+  image{
+   object-fit: cover;
+  }
+  &:hover {
+    transform: scale(0.98); 
+  }
+}
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -100,7 +109,7 @@ body {
     font-size: 2.8rem; 
   }
   #card {
-    width:90vw;
+    width:95vw;
   }
 }
 @media (max-width: 477px) {
