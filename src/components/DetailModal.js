@@ -6,6 +6,7 @@ import Fade from "@material-ui/core/Fade";
 import { Rating } from "@material-ui/lab/";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import { CgCloseR } from "react-icons/cg";
+import uuid from "react-uuid";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -78,9 +79,9 @@ const DetailModal = ({
                 />
                 {gameDetail.platforms &&
                   gameDetail.platforms.map((platform) => (
-                    <h4 className="platforms">{platform.platform.name}</h4>
+                    <h4 className="platforms" key ={uuid()}>{platform.platform.name}</h4>
                   ))}
-                <p id="transition-modal-description">
+                <p id="transition-modal-description" key={uuid()}>
                   {gameDetail.description_raw}
                 </p>
 
