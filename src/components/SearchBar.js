@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { TextField, Button, Grid } from "@material-ui/core";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import { deepOrange, blue, orange, red } from "@material-ui/core/colors";
+import { blue, red } from "@material-ui/core/colors";
 import SearchIcon from "@material-ui/icons/Search";
 import GamepadIcon from "@material-ui/icons/Gamepad";
 import { searchGamesURL } from "../api";
@@ -28,7 +28,6 @@ const SearchbBar = () => {
       const response = await fetch(searchGamesURL(game_name));
       const data = await response.json();
       setSearchGame(data.results);
-      console.log(searchGame);
     } catch (err) {
       console.log(`didn't work ${err}`);
     }
@@ -42,7 +41,6 @@ const SearchbBar = () => {
     e.preventDefault();
     setInput("");
     fetchSearchedURL(input);
-    console.log(`submitted ${searchGame.name}`);
   };
 
   const clearSearch = () => {
@@ -77,16 +75,16 @@ const SearchbBar = () => {
             </form>
           </Grid>
 
-          <Grid item alignItems="stretch" style={{ display: "flex" }}>
+          <Grid item>
             <div className="btn-div">
-            <Button
-              id="search-btn"
-              onClick={handleSubmit}
-              color="primary"
-              variant="contained"
-            >
-              <SearchIcon />
-            </Button>
+              <Button
+                id="search-btn"
+                onClick={handleSubmit}
+                color="primary"
+                variant="contained"
+              >
+                <SearchIcon />
+              </Button>
             </div>
           </Grid>
         </Grid>

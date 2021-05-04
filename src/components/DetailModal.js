@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
-import { GameContext } from "../context/GameContext";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import { Rating } from "@material-ui/lab/";
 import PacmanLoader from "react-spinners/PacmanLoader";
-import {CgCloseR} from "react-icons/cg"
+import { CgCloseR } from "react-icons/cg";
+
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: "flex",
@@ -66,8 +66,8 @@ const DetailModal = ({
               </div>
             ) : (
               <div>
-                <div className= "close-modal">
-                <CgCloseR id= "close-icon" onClick={handleClose} />
+                <div className="close-modal">
+                  <CgCloseR id="close-icon" onClick={handleClose} />
                 </div>
                 <h2>{name}</h2>
                 <Rating
@@ -91,6 +91,7 @@ const DetailModal = ({
                         className="description-gallery-images"
                         key={image.id}
                         src={image.image}
+                        alt="game gallery screenshots"
                       />
                     ))}
                 </div>

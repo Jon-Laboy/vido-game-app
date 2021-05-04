@@ -1,48 +1,46 @@
-
-
 .search-section {
   margin-top: 3rem;
   margin-bottom: 3rem;
-    #search-bar {
-        background: #000;
-        color: white;
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.4rem;
-        letter-spacing: 2.5px;
-        padding: 0.7rem;
-        box-shadow: 0px 0px 8px rgb(244, 67, 54);
-        width: 100%;
-        border-radius: 8px;
-    }
-    #search-btn {
-      height:2.88rem;
-      border-radius: 8px;
-      margin-left: .4rem;
-      padding: 1.4rem;
-      box-shadow: 0px 0px 3px rgb(244,67,54);
-    }
-    
-}
-@media (max-width: 768px) {
- #search-bar{
-   height: 2rem;
- }
- .btn-div { 
-  width: 100vw;
-  padding:1rem;
- }
- #search-btn {
-   width: 15vw;
- }
-}
-
-@media (max-width: 420px) {
-  .btn-div { 
-   width: 100vw;
-   padding:1rem;
+  #search-bar {
+    background: #000;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.67rem;
+    letter-spacing: 2.5px;
+    padding: 0.7rem;
+    box-shadow: 0px 0px 8px $primaryColor;
+    width: 40vw;
+    border-radius: 8px;
   }
   #search-btn {
-    width: 15vw;
+    height: 2.88rem;
+    border-radius: 8px;
+    margin-left: 0.4rem;
+    padding: 1.4rem;
+    box-shadow: 0px 0px 3px $primaryColor;
   }
- }
+  @media (max-width: 768px) {
+    #search-bar {
+      font-size: 1.25rem;
+      width: 80vw;
+      height: 1.4rem;
+    }
+    #search-btn {
+      width: 15vw;
+    }
+    .btn-div {
+      width: 100vw;
+      padding: 1rem;
+    }
+  }
+  @media (max-width: 420px) {
+    .btn-div {
+      width: 100vw;
+      padding: 1rem;
+    }
+    #search-btn {
+      width: 15vw;
+    }
+  }
+}

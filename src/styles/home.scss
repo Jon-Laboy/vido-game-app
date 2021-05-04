@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Black+Ops+One&display=swap");
 
+$primaryColor: rgb(244, 67, 54);
+$secondaryColor: rgb(219, 5, 5);
+
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +24,7 @@ body {
 }
 
 .game-logo {
-  color: rgb(244, 67, 54);
+  color: $primaryColor;
   margin: 1.5rem;
   display: flex;
   align-items: center;
@@ -37,14 +40,14 @@ body {
   font-size: 4rem;
   font-family: "Audiowide", cursive;
   font-weight: lighter;
-  color: rgb(244, 67, 54);
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  color: $primaryColor;
+  margin-top: 5rem;
+  margin-bottom: 1.7rem;
   letter-spacing: 2px;
 }
 
 #card-title {
-  color: rgb(187, 2, 2);
+  color: $secondaryColor;
   font-family: "Audiowide", cursive;
   letter-spacing: 1.5px;
 }
@@ -55,11 +58,11 @@ body {
 }
 #card {
   transition: transform 0.5s;
-  image{
-   object-fit: cover;
+  image {
+    object-fit: cover;
   }
   &:hover {
-    transform: scale(0.98); 
+    transform: scale(0.98);
   }
 }
 
@@ -75,7 +78,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(244, 67, 54);
+  background: $primaryColor;
   border-radius: 5px;
 }
 
@@ -85,41 +88,41 @@ body {
   border-radius: 5px;
 }
 @media (max-width: 669px) {
-  #home-page-titles { 
-    font-size: 3.5rem; 
+  #home-page-titles {
+    font-size: 3.5rem;
   }
 }
 @media (max-width: 579px) {
   .game-logo {
-    span { 
+    span {
       font-size: 3.14rem;
-    } 
+    }
   }
-  #home-page-titles { 
-    font-size: 3rem; 
+  #home-page-titles {
+    font-size: 3rem;
   }
 }
 @media (max-width: 505px) {
   .game-logo {
-    span { 
+    span {
       font-size: 3rem;
-    } 
+    }
   }
-  #home-page-titles { 
-    font-size: 2.8rem; 
+  #home-page-titles {
+    font-size: 2.8rem;
   }
   #card {
-    width:95vw;
+    width: 95vw;
   }
 }
 @media (max-width: 477px) {
   .game-logo {
-    span { 
+    span {
       font-size: 2.5rem;
-    } 
+    }
   }
-  #home-page-titles { 
-    font-size: 2.2rem; 
+  #home-page-titles {
+    font-size: 2.2rem;
   }
   #card-media {
     width: 100%;
@@ -127,12 +130,12 @@ body {
 }
 @media (max-width: 427px) {
   .game-logo {
-    span { 
+    span {
       font-size: 2.02rem;
-    } 
+    }
   }
-  #home-page-titles { 
-    font-size: 2.03rem; 
+  #home-page-titles {
+    font-size: 2.03rem;
   }
 }
 @media (max-width: 385px) {
@@ -140,21 +143,20 @@ body {
     #gamepad-logo {
       font: 10rem;
     }
-    span { 
+    span {
       font-size: 1.9rem;
     }
   }
-  #home-page-titles { 
-    font-size: 1.8rem; 
+  #home-page-titles {
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 367px) {
   .game-logo {
-    span { 
+    span {
       font-size: 1.47rem;
-    } 
+    }
   }
-  
 }
 @import "./search-bar";
 @import "./detail-modal";

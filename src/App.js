@@ -1,12 +1,12 @@
-import React, {useEffect} from 'react'
-import './styles/home.scss'
-import Home from './pages/Home'
-import  { GameProvider } from './context/GameContext'
-import { DetailsProvider } from './context/DetailsContext'
+import React from "react";
+import "./styles/home.scss";
+import Home from "./pages/Home";
+import { GameProvider } from "./context/GameContext";
+import { DetailsProvider } from "./context/DetailsContext";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <GameProvider>
         <DetailsProvider>
           <Home />

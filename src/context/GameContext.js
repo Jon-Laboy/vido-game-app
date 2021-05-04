@@ -11,13 +11,13 @@ export const GameProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     async function fetchUpcomingURL() {
       try {
         const response = await fetch(upcomingGamesURL());
         const data = await response.json();
         setupcomingGame(data.results);
-        setLoading(false)
+        setLoading(false);
       } catch (err) {
         console.log(err);
       }
@@ -42,7 +42,7 @@ export const GameProvider = ({ children }) => {
         console.log(err);
       }
     }
-    fetchNewURL();  
+    fetchNewURL();
   }, []);
 
   return (
@@ -52,7 +52,7 @@ export const GameProvider = ({ children }) => {
         newGames: [newGame, setNewGame],
         upcomingGames: [upcomingGame, setupcomingGame],
         searchedGames: [searchGame, setSearchGame],
-        loadingGames: [loading, setLoading]
+        loadingGames: [loading, setLoading],
       }}
     >
       {children}

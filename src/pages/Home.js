@@ -1,9 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Game from "../components/Game";
 import { GameContext } from "../context/GameContext";
 import { Container, Grid } from "@material-ui/core";
 import SearchbBar from "../components/SearchBar";
 import PacmanLoader from "react-spinners/PacmanLoader";
+import uuid from "react-uuid";
 
 const Home = () => {
   const {
@@ -13,11 +14,11 @@ const Home = () => {
     searchedGames,
     loadingGames,
   } = useContext(GameContext);
-  const [popularGame, setPopularGame] = popularGames;
-  const [newGame, setNewGame] = newGames;
-  const [upcomingGame, setUpcomingGame] = upcomingGames;
-  const [searchGame, setSearchGame] = searchedGames;
-  const [loading, setLoading] = loadingGames;
+  const [popularGame] = popularGames;
+  const [newGame] = newGames;
+  const [upcomingGame] = upcomingGames;
+  const [searchGame] = searchedGames;
+  const [loading] = loadingGames;
 
   return (
     <div className="game-list">
@@ -37,7 +38,7 @@ const Home = () => {
             <Grid container spacing={2} justify="center">
               {searchGame &&
                 searchGame.map((game) => (
-                  <Grid item xs={12} md={6} lg={4}>
+                  <Grid item xs={12} md={6} lg={4} key={uuid()}>
                     <Game
                       key={game.id}
                       name={game.name}
@@ -57,7 +58,7 @@ const Home = () => {
             <Grid container spacing={2} justify="center">
               {upcomingGame &&
                 upcomingGame.map((game) => (
-                  <Grid item xs={12} md={6} lg={4}>
+                  <Grid item xs={12} md={6} lg={4} key={uuid()}>
                     <Game
                       key={game.id}
                       name={game.name}
@@ -77,7 +78,7 @@ const Home = () => {
             <Grid container spacing={2} justify="center">
               {newGame &&
                 newGame.map((game) => (
-                  <Grid item xs={12} md={6} lg={4}>
+                  <Grid item xs={12} md={6} lg={4} key={uuid()}>
                     <Game
                       key={game.id}
                       name={game.name}
@@ -97,7 +98,7 @@ const Home = () => {
             <Grid container spacing={2} justify="center">
               {popularGame &&
                 popularGame.map((game) => (
-                  <Grid item xs={12} md={6} lg={4}>
+                  <Grid item xs={12} md={6} lg={4} key={uuid()}>
                     <Game
                       key={game.id}
                       name={game.name}
