@@ -45,4 +45,3 @@ export const newGamesURL = () => `${base_url}${new_games}`;
 export const searchGamesURL = (game_name) =>
   `${base_url}games?search=${game_name}&key=${API_KEY}&page_size=9`;
 
-// https://api.rawg.io/api/games?search=portal&key=a331fe3877da4b238c9b16cdc4f27222
